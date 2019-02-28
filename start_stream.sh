@@ -12,8 +12,9 @@ AUDIO_RATE="44100"
 STREAM_KEY=$(cat twitch_key)    #"$1" # use the terminal command Streaming streamkeyhere to stream your video to twitch or justin
 SERVER="live-ams" # twitch server in frankfurt, see http://bashtech.net/twitch/ingest.php for list
 BUF="2M"
+FFMPEG="./FFmpeg/ffmpeg_g"
 
-./ffmpeg-4.1/ffmpeg_g  \
+$FFMPEG  \
     -f x11grab -s $INRES -r $FPS -re -i :0.0+0,0 \
     -ac 2  -s $OUTRES \
     -acodec libmp3lame -ab 128k -ar $AUDIO_RATE -threads $THREADS\

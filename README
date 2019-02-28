@@ -3,4 +3,6 @@ A Light FFMPEG client
 Create a file called "twitch_key" and paste only your Twitch streaming key into it.
 Then start the script. Obviously.
 
-Important: the script needs ffmpeg-4.1 library to work. Either link it to the system's library compile a local version (what I'm doing at the moment)
+Note: the script needs ffmpeg-4.1 library to work. Either link it to the system's library compile a local version (what I'm doing at the moment)
+
+Note 2: the script now installs the latest FFmpeg lib from github.
