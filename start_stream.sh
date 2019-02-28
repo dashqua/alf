@@ -13,13 +13,6 @@ STREAM_KEY=$(cat twitch_key)    #"$1" # use the terminal command Streaming strea
 SERVER="live-ams" # twitch server in frankfurt, see http://bashtech.net/twitch/ingest.php for list
 BUF="2M"
 
-# deprec="-thread_queue_size 256  "
-#        -vf fps=$FPS
-#        -x264-params "nal-hrd=cbr" -b:v $CBR -minrate $CBR -maxrate $CBR -bufsize $BUF -pix_fmt yuv420p\
-#        -preset $QUALITY -tune film   -strict normal \
-#       -vf mpdecimate   
-#          -f alsa -i pulse   -vcodec libx264
-
 ./ffmpeg-4.1/ffmpeg_g  \
     -f x11grab -s $INRES -r $FPS -re -i :0.0+0,0 \
     -ac 2  -s $OUTRES \
